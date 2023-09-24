@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
+    <%= stylesheet_link_tag '/css/bootstrap.css' %>
+    <%= stylesheet_link_tag '/css/3-col-portfolio.css' %>
+
+    <%= javascript_include_tag '/js/jquery-1.10.2.js' %>
+    <%= javascript_include_tag '/js/bootstrap.js' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
