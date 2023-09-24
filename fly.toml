@@ -1,0 +1,26 @@
+# fly.toml app configuration file generated for misty-wood-4434 on 2023-09-24T15:08:20-06:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "misty-wood-4434"
+primary_region = "sea"
+console_command = "/rails/bin/rails console"
+
+[build]
+
+[[mounts]]
+  source = "data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[[statics]]
+  guest_path = "/rails/public"
+  url_prefix = "/"
